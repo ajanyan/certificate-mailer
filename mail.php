@@ -1,10 +1,11 @@
 <?php 
- $text1 = $_POST["name"];
-    $text2 = $_POST["sem"]."_".$_POST["branch"];
-    $text3 = $_POST["event"];
+    $text1 = $_GET["name"];
+    $text2 = $_GET["sem"].$_GET["branch"];
+    $text3 = $_GET["event"];
+    $email = $_GET["email"];
    $to = $email;
             $subject = "Participation Certificate";
-            $message = "Hi ".$name.",<br/><br/>Please check the participation certificate attached along with the mail.<br><br>";
+            $message = "Hi ".$text1.",<br/><br/>Please check the participation certificate attached along with the mail.<br><br>";
 
             $headers = "From: From-Name<from@gmail.com>";
 // boundary
@@ -18,9 +19,13 @@
             $message = "This is a multi-part message in MIME format.\n\n" . "--{$mime_boundary}\n" . "Content-Type: text/html; charset=ISO-8859-1\"\n" . "Content-Transfer-Encoding: 7bit\n\n" . $message . "\n\n";
 
                 $message .= "--{$mime_boundary}\n";
-                $filepath = "certificates/".$text1." _".$text2."_".$text3.".jpg";
+              //////////////  $filepath = "certificates/".$text1." _".$text2."_".$text3.".jpg";
+
+
+                $filepath = "certificates/".$text1."_".$text2."_".$text3.".jpg";
                // move_uploaded_file($_FILES['image']['tmp_name'], $filepath); //upload the file
-                $filename = $text1." _".$text2."_".$text3.".jpg";
+               /////////////////////// $filename = $text1." _".$text2."_".$text3.".jpg";
+                $filename = $text1."_".$text2."_".$text3.".jpg";
                 $file = fopen($filepath, "rb");
                 $data = fread($file, filesize($filepath));
                 fclose($file);
@@ -30,7 +35,12 @@
                         "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
                 $message .= "--{$mime_boundary}\n";
 
-mail($to, $subject, $message, $headers);
+if(mail($to, $subject, $message, $headers))
+{
+    echo "Success";
+}
+else
+    echo "Error";
 
 
  ?>
