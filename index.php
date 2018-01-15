@@ -41,13 +41,9 @@
     <div class="form-group col-md-4">
       <label for="inputSemester">Semester</label>
        <select id="inputSemester" class="form-control" name="sem">
-        <option selected>S1</option>
-        <option>S2</option>
-        <option>S3</option>
+        <option selected>S2</option>
         <option>S4</option>
-        <option>S5</option>
         <option>S6</option>
-        <option>S7</option>
         <option>S8</option>
       </select>
     </div>
