@@ -20,5 +20,6 @@
 
       }
 
+
       //imagedestroy($jpg_image);
     ?> 
