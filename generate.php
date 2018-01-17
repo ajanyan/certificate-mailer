@@ -16,7 +16,7 @@
       imagettftext($jpg_image, 70, 0, 2000, 1700, $colour, $font_path, $text4);
       if(imagejpeg($jpg_image,"certificates/".$text1."_".$text2."_".$text3.".jpg"))
       {
-            imagejpeg($jpg_image);
+            echo "Success";
 
       }
 
