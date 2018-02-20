@@ -1,7 +1,6 @@
-<?php 
+<?php
     $text1 = $_GET["name"];
-    $text2 = $_GET["sem"].$_GET["branch"];
-    $text3 = $_GET["event"];
+    $text2 = $_GET["class"];
     $email = $_GET["email"];
    $to = $email;
             $subject = "Participation Certificate";
