@@ -3,10 +3,10 @@
     $text2 = $_GET["class"];
     $email = $_GET["email"];
    $to = $email;
-            $subject = "Participation Certificate";
+            $subject = "Participation Certificate Physical Education Department";
             $message = "Hi ".$text1.",<br/><br/>Please check the NSS Annual Athletic Meet 2017- 2018 Participation Certificate attached along with the mail.<br><br>";
 
-            $headers = "From: Certificate-Tricodia<support@tricodia.com>";
+            $headers = "From: Physical Education Department - Tricodia<support@tricodia.com>";
 // boundary
             $semi_rand = md5(time());
             $mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
