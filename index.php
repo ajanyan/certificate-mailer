@@ -51,7 +51,7 @@
     </div>
      </div>
   <div class="form-row">
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-6">
       <label for="inputSemester">Semester</label>
        <select id="inputSemester" class="form-control" name="sem">
         <option selected>S2</option>
@@ -60,7 +60,7 @@
         <option>S8</option>
       </select>
     </div>
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-6">
       <label for="inputBranch">Branch</label>
       <select id="inputBranch" class="form-control" name="branch">
         <option selected>CSE</option>
@@ -71,26 +71,6 @@
         <option>IC</option>
       </select>
     </div>
-    <div class="form-group col-md-4">
-      <label for="inputEvent">Event</label>
-      <select id="inputEvent" class="form-control" name="event">
-        <option selected>100m</option>
-        <option>200m</option>
-        <option>400m</option>
-        <option>800m</option>
-        <option>1500m</option>
-        <option>5000m</option>
-        <option>High Jump</option>
-        <option>Long Jump</option>
-        <option>Triple Jump</option>
-        <option>Shotput</option>
-        <option>Discus Throw</option>
-        <option>Hammer Throw</option>
-        <option>Javalin Throw</option>
-        <option>1500m Walk</option>
-      </select>
-    </div>
-  </div>
 
  
   <button type="submit" class="btn btn-primary">Send Mail</button>
